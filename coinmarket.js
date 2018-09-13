@@ -1,21 +1,19 @@
-var json = new XMLHttpRequest(); // start a new variable to store the JSON in
-json.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
-    var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+<!DOCTYPE html>
+<html>
+<body>
 
-    object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
-      document.write(
-        currency.name +
-        " is currently worth $" +
-        currency.price_usd +
-        " USD<br>"
-      ); // get the array keys from the API
-    });
-  }
-};
-json.open(
-  "GET", // method
-  "https://api.coinmarketcap.com/v1/ticker/?convert=USD&limit=10", // url
-  true // async
-); // initialise the request
-json.send(); //send request
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+</body>
+</html>
+
