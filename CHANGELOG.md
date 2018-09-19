@@ -1,8 +1,13 @@
-# Changelog
+## v2.0
 
-## 2017/12/27
+* Using long pooling api
+* Simplify constructor (only need `env` and `clientId`)
+  Where `env`:
+  * `staging`: Testing env
+  * `prod`: Production env
 
-Added
-- Project structure
-- Pass1 token smart contract
-- Pass1 token unit test
+## v1.0
+
+* Support basic features:
+  * Create SessionCode
+  * SessionCode life-circle init -> loading -> complete
